@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* текст */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #845abb;
+    color: #ffffff;
+    height: 100%;
+    line-height: 1.6;
+}
+
+/*  хедер  */
+.header {
+    background-color: #331757;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+/* размеры, отступы, выравнивание */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* выравнивание */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/*  лого  */
+.logo {
+    /* убрать подчеркивание ссылки */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-width: 220px;
+    height: auto;
+    display: block;
+}
+
+/*  хедер правая часть  */
+/* отступы, выравнивание */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* кнопки хедера  */
+.nav-buttons {
+    display: flex;
+    /* расстояние между */
+    gap: 15px;
+}
+
+.nav-button {
+    background-color: #ff6b35;
+    color: #ffffff;
+    border: none;
+    /* отступ */
+    padding: 10px 20px;
+    /* сглаживание */
+    border-radius: 10px;
+    /* шрифт */
+    font-size: 14px;
+    font-weight: 600;
+    /* наведение курсора */
+    cursor: pointer;
+    transition: all 0.1s ease;
+    /* текст */
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+/* действия при наведении курсора */
+.nav-button:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+
+/*  профиль  */
+.profile-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.05s ease;
+    overflow: hidden;
+    padding: 0;
+}
+
+.profile-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.profile-button img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+/*  основная страница  */
+/* отступы */
+.main-content {
+    flex: 1;
+    padding: 0;
+}
+
+.content-container {
+    height: calc(100vh - 80px); /* Высота экрана минус высота хедера */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* разделение */
+    gap: 20px;
+    align-items: start;
+    margin: 0;
+}
+
+/*   левая часть   */
+.image-section {
+    /* на всю высоту */
+    height: 100%;
+    position: relative;
+}
+/* контейнер с изображением */
+.game-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+/* изображение */
+.game-image img {
+    width: 100%;
+    height: 100%;
+    /* сохранение пропорций при заполнении */
+    object-fit: cover;
+    display: block;
+}
+
+/*  правая часть  */
+.content-section {
+    padding: 0px 10px;
+    height: 90vh;
+}
+
+
+/*   игры   */
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.games-list {
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.game-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border-left: 4px solid #ff6b35;
+    overflow: hidden; /* Важно: обрезаем выходящее за границы */
+    text-decoration: none;
+}
+
+.game-content {
+    display: flex;
+    align-items: stretch; /* Растяжка дочерних элементов по высоте */
+    height: 120px; /* Фиксированная высота карточки */
+}
+
+.game-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
+}
+
+.game-info {
+    flex: 1; /* Занимает всю доступную ширину слева */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-image-container {
+    width: 250px; /* Фиксированная ширина для изображения */
+    flex-shrink: 0; /* Запрещаем сжатие */
+    overflow: hidden; /* Обрезаем выходящее за границы */
+}
+
+.game-image-right {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет контейнер сохраняя пропорции */
+    display: block;
+}
+
+.game-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.game-price {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+/*   футер   */
+.footer {
+    background: #000; /* Черный фон */
+    padding: 20px 0;
+    /* всегда ниже остального контента */
+    flex-shrink: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer .contact-info {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fff; /* Белый текст */
+}
+
+.footer .contact-info:last-child {
+    margin-bottom: 0;
+}
+
+/* Убираем старую контактную информацию из content-section */
+.contact-section {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* about */
+
+.container_about{
+width: 100%;
+height: 80vh;
+flex: 1;
+padding: 15px 20px;
+}
+
+.about_background{
+background-color: rgba(0, 0, 0, 0.5);
+/* центровка */
+margin: 0 auto;
+height: 90%;
+width: 90%;
+padding: 20px 20px;
+/* сглаживание */
+border-radius: 10px;
+/* шрифт */
+font-size: 24px;
+font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Market */
+
+/* общее пространство */
+.space{
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: start;
+}
+
+/* область поиска */
+.search_space{
+height: 70px;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 20px;
+border-bottom: 2px solid #000;
+}
+
+/* линия поиска */
+.search_line{
+    /* регулировка размера */
+width: 30%;
+height: 100%;
+padding: 0px 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.feeld{
+    height: 48px;
+    background-color: rgb(177, 177, 177);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    padding: 10px;
+    border-radius: 50px;
+    gap: 10px;
+    overflow: hidden;
+}
+/* кнопка поиска */
+.search_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(212, 212, 212);
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    overflow: hidden;
+    padding: 0;
+    flex-shrink: 0; /* чтобы иконка не сжималась */
+}
+.search_img:hover{
+    background-color: rgb(255, 255, 255);
+}
+.search_img:active{
+    background-color: rgb(193, 193, 193);
+    transform: scale(0.95);
+}
+
+.input_text{
+width: 95%;
+/* чтобы поле ввода росло */
+flex-grow: 1;
+/* чтобы могло сжиматься */
+flex-shrink: 1;
+/* начальный размер */
+flex-basis: 0;
+/* убирает рамку и фон поля ввода */
+border: none;
+outline: none;
+background-color: transparent;
+font-size: 24px;
+font-weight: 500;
+/* для корректного переполнения */
+overflow-wrap:break-word;
+white-space: normal;
+}
+
+/* кнопки поиска */
+.search_buttons{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+/* фильтр кнопка */
+.filter{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0,05s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    /* текст */
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+.filter:hover{
+transform: scale(1.02);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+background-color: rgba(30, 30, 30, 0.5);
+}
+.filter:active{
+transform:scale(1);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+background-color: rgba(30, 30, 30, 0.5);
+}
+
+
+/* сортировка кнопка */
+.sort{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0,05s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    /* текст */
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+.sort:hover{
+transform: scale(1.02);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+background-color: rgba(30, 30, 30, 0.5);
+}
+.sort:active{
+transform:scale(1);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+background-color: rgba(30, 30, 30, 0.5);
+}
+
+
+
+/* список игр */
+.list_games{
+min-height: 80vh;
+display: flex; 
+/* для переноса элементов на следующую строку */
+flex-wrap: wrap; 
+gap: 20px;
+justify-content: center;
+padding: 10px;
+}
+
+
+/* ячейка игры */
+.game_cell{
+height: 300px;
+width: 200px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 20px;
+justify-content: start;
+align-items: center;
+
+background-color: rgb(255, 107, 53);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+cursor: pointer;
+transition: all 0.05s ease;
+}
+.game_cell:hover{
+transform: scale(1.02);
+background-color: rgb(255, 139, 97);
+}
+.game_cell:active{
+transform:scale(0.98);
+background-color: rgb(255, 139, 97);
+}
+
+/* изображение игры */
+.void_cell{
+height: 40%;
+width: 100%;
+flex-shrink: 0; /* Запрещаем сжатие */
+    overflow: hidden;
+    object-fit:cover;
+    display: block;
+}
+/* название игры */
+.name_game{
+    height: 50%;
+width: 100%;
+font-size: 20px;
+font-weight: 500;
+color: #fff;
+justify-content: start;
+align-items: center;
+}
+/* цена игры */
+.cost_game{
+    height: 10%;
+width: 100%;
+font-size: 20px;
+font-weight: 500;
+color: #90bd92;
+justify-content: start;
+align-items: center;
+}
+
+
+
+
+
+
+
+
+/* enter */
+
+/* логотип */
+.logo_enter{
+    height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #160a26;
+}
+.logo-image_enter {
+    max-width: 420px;
+    height: auto;
+    display: block;
+}
+
+/* главный контейнер */
+.enter_contain{
+height: calc(100vh - 190px);
+background-color: #160a26;
+display: flex;
+gap: 10px;
+justify-content: center;
+flex-direction: column;
+padding: 100px 300px;
+}
+/* логин и пароль */
+.log_pas_contain{
+justify-content: center;
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 10px;
+}
+.log_pas{
+    width: 70%;
+    gap: 5px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: right;
+}
+.log_pas_text{
+font-size: 16px;
+font-weight: 400;
+text-align: right;
+}
+.input_logpas{
+max-width: 300px;
+/* чтобы поле ввода росло */
+flex-grow: 1;
+/* чтобы могло сжиматься */
+flex-shrink: 1;
+/* начальный размер */
+flex-basis: 0;
+outline: none;
+font-size: 16px;
+font-weight: 400;
+/* для корректного переполнения */
+overflow-wrap:break-word;
+white-space: normal;
+}
+
+
+.registration{
+    text-decoration: none;
+    color: rgb(128, 128, 255);
+  text-align: center;
+  cursor: pointer;
+}
+.registration:hover{
+    text-decoration:underline;
+}
+
+
+/* кнопки */
+.button_enter{
+    text-decoration: none;
+padding: 0 10px;
+align-self: center;
+background-color: rgb(0, 128, 0);
+font-size: 24px;
+font-weight: 600;
+text-align: center;
+color: rgb(255, 255, 255);
+border: 2px solid white;
+cursor: pointer;
+transition: all 0.05s ease;
+}
+.button_enter:hover{
+transform: scale(1.02);
+background-color: rgb(0, 196, 0);;
+}
+.button_enter:active{
+transform: scale(0.98);
+background-color: rgb(0, 196, 0);;
+}
+
+.button_no_enter{
+    text-decoration: none;
+padding: 0 10px;
+align-self: center;
+background-color: rgb(128, 128, 128);
+font-size: 24px;
+font-weight: 600;
+text-align: center;
+color: rgb(0, 0, 0);
+border: 2px solid rgb(0, 0, 0);
+cursor: pointer;
+transition: all 0.05s ease;
+}
+.button_no_enter:hover{
+transform: scale(1.02);
+background-color: rgb(196, 196, 196);
+}
+.button_no_enter:active{
+transform: scale(0.98);
+background-color: rgb(196, 196, 196);
+}
