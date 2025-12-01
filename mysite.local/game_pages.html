@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Search_lo_Games</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- хедер -->
+    <div id="header-placeholder"></div>
+
+    <!-- основная часть -->
+    <div class="main_contain">
+        <!-- информация игры -->
+        <div class="background">
+            <!-- левая часть -->
+            <div class="left_section">
+                <!-- картинки -->
+                 <div class="pictures_container">
+                    <div class="arrow-image-container">
+                        <img src="pictures/arrow_left.png" alt="arrow_right" class="arrow" id="prevArrow">
+                    </div>
+                    <div class="game-image-container">
+                        <img src="pictures/minecraft_gallery/1.jpg" alt="minecraft" class="game-image" id="mainGameImage">
+                    </div>
+                    <div class="arrow-image-container">
+                        <img src="pictures/arrow_right.png" alt="arrow_right" class="arrow" id="nextArrow">
+                    </div>
+                    
+                 </div>
+                 <!-- секция с картинками -->
+                    <div class="pictures_list" id="galleryThumbnails">
+                        <img  alt="0_pic" class="pic" data-index="0"></img>
+                        <img  alt="1_pic" class="pic" data-index="1"></img>
+                        <img  alt="2_pic" class="pic" data-index="2"></img>
+                        <img  alt="3_pic" class="pic" data-index="3"></img>
+                        <img  alt="4_pic" class="pic" data-index="4"></img>
+                    </div>
+
+                <!-- кнопки -->
+                 <div class="buttons">
+                    <!-- текст с ценой -->
+                    <p class="price" id="gamePrice">
+                        цена: 2000 р.
+                    </p>
+                    <!-- кнопка в желаемое -->
+                    <div class="button_want">
+                        в желаемое
+                    </div>
+                    <!-- кнопка купить -->
+                    <div class="button_buy">
+                        купиить
+                    </div>
+                 </div>
+
+
+            </div>
+
+
+            <!-- правая часть -->
+            <div class="right_section">
+                <!-- изображение игры -->
+                    <img src="pictures/minecraft_banner.jpg" alt="banner" class="banner_image" id="gameBanner">
+                <div class="description">
+                    <h3 class="description_h3" id="gameTitle">Minecraft:</h3>
+                    <p class="description_text" id="gameDescription">Описание игры, описание игры, описание игры, описание игры, описание игры, описание игры,...</p>
+                </div>
+                <div class="info_game">
+                    <div class="info_game">
+                        <h3 class="info_h3">Об игре:</h3>
+                        <p class="info_text" id="gameRating">рейтинг:</p>
+                        <p class="info_text" id="gameDeveloper">разработчик:</p>
+                        <p class="info_text" id="gameReviews">недавние обзоры:</p>
+                        <p class="info_text" id="gameReleaseDate">дата выхода:</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- футер -->
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search_lo_Games</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- хедер -->
+    <div id="header-placeholder"></div>
+    <!-- основная часть -->
+    <!-- поиск -->
+     <div class="space">
+        <div class="search_space">
+            <div class="search_line">
+                <div class="feeld">
+                    <img src="pictures/search.png" alt="srch" class="search_img">
+                    <form class="input">
+                        <input type="text" class="input_text">
+                    
+                </form>
+                </div>
+            </div>
+            <!-- кнопки для поиска -->
+            <div class="search_buttons">
+                    <div class="filter_container">
+                        <div class="filter">
+                            фильтры >
+                        </div>
+
+                        <div class="filter_menu">
+                            <div class="menu_item">Онлайн</div>
+                            <div class="menu_item">Офлайн</div>
+                            <!-- фильтры -->
+                        </div>
+                    </div>
+
+                    
+                    <div class="sort_container">
+                        <div class="sort">
+                            сортировка по >
+                        </div>
+
+                        <div class="sort_menu">
+                            <div class="menu_item">возрастанию цены</div>
+                            <div class="menu_item">убыванию цены</div>
+                            <!-- Сортировка по -->
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- список игр -->
+        <div class="list_games">
+            <a href="game_pages.html?gameId=CS_GO" class="game_cell" id="1"><img src="pictures/csgo_banner.jpg" alt="void" class="img_cell"><p class="name_game">CS:GO</p><p class="cost_game">500 р.</p></a>
+            <a href="game_pages.html?gameId=minecraft"class="game_cell" id="2"><img src="pictures/Minecraft_banner.jpg" alt="void" class="img_cell"><p class="name_game">Minecraft</p><p class="cost_game">2000 р.</p></a>
+            <a href="game_pages.html?gameId=Hollow_knight" class="game_cell" id="3"><img src="pictures/hollow_knight_banner.jpg" alt="void" class="img_cell"><p class="name_game">Hollow_knight</p><p class="cost_game">1000 р.</p></a>
+     </div>
+    <!-- футер -->
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

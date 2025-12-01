@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search_lo_Games</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- лого -->
+        <div class="logo_enter">
+            <!-- ссылка на лого -->
+            <img src="pictures/logo.png" alt="Search_lo_Games" class="logo-image_enter">
+        </div>
+    <!-- основная часть -->
+     <div class="enter_contain">
+        <!-- логин и пароль -->
+        <div class="log_pas_contain">
+            <div class="log_pas"> 
+                <p class="log_pas_text">login:</p>
+                <input type="text" class="input_logpas" name="username" id="loginInput">
+            </div>
+            <div class="log_pas"> 
+                <p class="log_pas_text">password:</p>
+                <input type="password" class="input_logpas" name="password" id="passwordInput">
+            </div>
+            <div id="errorMessageDiv" class="error-message"></div> 
+        </div>
+        <a class="registration" href="regestration.html">
+            регистрация
+        </a>
+        <!-- кнопки входа -->
+         <a class="button_enter" id="loginSubmitButton">
+            Войти
+         </a>
+         <a class="button_no_enter">
+            Не удается войти?
+         </a>
+     </div>
+    <!-- футер -->
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>
